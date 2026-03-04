@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Esqueci a senha</title>
+</head>
+<body>
+    <main class="container">
+        <form id="forgotForm">
+            <h1>Recuperar Senha</h1>
+            <div class="input-box">
+                <i class="bx bxs-envelope"></i>
+                <input id="emailForgot" type="email" placeholder="Seu email" required>
+            </div>
+            <button type="submit" class="login">Enviar</button>
+            <p id="forgotMessage" class="message"></p>
+            <div class="register-link">
+                <p><a href="index.html">Voltar ao login</a></p>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        const forgotForm = document.getElementById("forgotForm");
+        const forgotMessage = document.getElementById("forgotMessage");
+
+        forgotForm.addEventListener("submit", function(e){
+            e.preventDefault();
+            const email = document.getElementById("emailForgot").value.trim();
+
+            // simulação de envio de email
+            forgotMessage.style.color = "#00ff88";
+            forgotMessage.style.opacity = 1;
+            forgotMessage.textContent = `Se o email ${email} estiver cadastrado, um email de recuperação foi enviado. ✅`;
+        });
+    </script>
+</body>
+</html>

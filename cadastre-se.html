@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cadastre-se</title>
+</head>
+<body>
+    <main class="container">
+        <form id="registerForm">
+            <h1>Cadastre-se</h1>
+
+            <div class="input-box">
+                <i class="bx bxs-user"></i>
+                <input id="newName" type="text" placeholder="Nome completo" required>
+            </div>
+
+            <div class="input-box">
+                <i class="bx bxs-envelope"></i>
+                <input id="newEmail" type="email" placeholder="Email" required>
+            </div>
+
+            <div class="input-box">
+                <i class="bx bxs-lock-alt"></i>
+                <input id="newPassword" type="password" placeholder="Senha" required>
+            </div>
+
+            <button type="submit" class="login">Cadastrar</button>
+            <p id="registerMessage" class="message"></p>
+            <div class="register-link">
+                <p><a href="index.html">Voltar ao login</a></p>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        const registerForm = document.getElementById("registerForm");
+        const registerMessage = document.getElementById("registerMessage");
+
+        registerForm.addEventListener("submit", function(e){
+            e.preventDefault();
+            const name = document.getElementById("newName").value.trim();
+            const email = document.getElementById("newEmail").value.trim();
+
+            // simulação de cadastro
+            registerMessage.style.color = "#00ff88";
+            registerMessage.style.opacity = 1;
+            registerMessage.textContent = `Conta criada com sucesso para ${name} (${email}) ✅`;
+        });
+    </script>
+</body>
+</html>

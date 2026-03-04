@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <title>Tela de Login Julius </title>
+</head>
+<body>
+    <main class="container">
+
+        <!-- LOGIN -->
+        <form id="loginForm" class="form active">
+            <h1>Login</h1>
+            <div class="input-box">
+                <i class="bx bxs-user"></i>
+                <input id="email" type="email" placeholder="Usuário" required>
+            </div>
+            <div class="input-box">
+                <i class="bx bxs-lock-alt"></i>
+                <input id="password" type="password" placeholder="Senha" required>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Lembrar senha</label>
+                <a href="#" id="toForgot">Esqueci a senha</a>
+            </div>
+            <button type="submit" class="login">Login</button>
+            <p id="loginMessage" class="message"></p>
+            <div class="register-link">
+                <p>Não tem uma conta? <a href="#" id="toRegister">Cadastre-se</a></p>
+            </div>
+        </form>
+
+        <!-- CADASTRE-SE -->
+        <form id="registerForm" class="form">
+            <h1>Cadastre-se</h1>
+            <div class="input-box">
+                <i class="bx bxs-user"></i>
+                <input id="newName" type="text" placeholder="Nome completo" required>
+            </div>
+            <div class="input-box">
+                <i class="bx bxs-envelope"></i>
+                <input id="newEmail" type="email" placeholder="Email" required>
+            </div>
+            <div class="input-box">
+                <i class="bx bxs-lock-alt"></i>
+                <input id="newPassword" type="password" placeholder="Senha" required>
+            </div>
+            <button type="submit" class="login">Cadastrar</button>
+            <p id="registerMessage" class="message"></p>
+            <div class="register-link">
+                <p><a href="#" id="toLoginFromRegister">Voltar ao login</a></p>
+            </div>
+        </form>
+
+        <!-- ESQUECI SENHA -->
+        <form id="forgotForm" class="form">
+            <h1>Recuperar Senha</h1>
+            <div class="input-box">
+                <i class="bx bxs-envelope"></i>
+                <input id="emailForgot" type="email" placeholder="Seu email" required>
+            </div>
+            <button type="submit" class="login">Enviar</button>
+            <p id="forgotMessage" class="message"></p>
+            <div class="register-link">
+                <p><a href="#" id="toLoginFromForgot">Voltar ao login</a></p>
+            </div>
+        </form>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
